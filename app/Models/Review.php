@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'cafe_id',
+        'rating',
+        'comment'
+    ];
+
+    public function cafes()
+    {
+        return $this->belongsTo(Cafe::class);
+    }
 }
