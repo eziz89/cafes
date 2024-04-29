@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'cafe_id',
+        'customer_name',
+        'data_time',
+        'party_size'
+    ];
+
+    public function cafes()
+    {
+        return $this->belongsTo(Cafe::class);
+    }
 }
