@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'adress',
+        'attribute'
+    ];
+
+    public function cafes()
+    {
+        return $this->hasMany(Cafe::class);
+    }
 }
