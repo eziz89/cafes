@@ -7,5 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cafe extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'name',
+        'description',
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function reservation()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }
