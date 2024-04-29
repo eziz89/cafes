@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'name',
+    ];
+
+    public function cafes()
+    {
+        return $this->hasMany(Cafe::class);
+    }
 }
