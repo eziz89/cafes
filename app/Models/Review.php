@@ -9,6 +9,7 @@ class Review extends Model
 {
     protected $fillable = [
         'cafe_id',
+        'customer_name',
         'rating',
         'comment'
     ];

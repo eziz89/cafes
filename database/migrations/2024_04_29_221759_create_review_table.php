@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('review', function (Blueprint $table) {
             $table->id();
             $table->integer('cafe_id');
+            $table->string('customer_name');
             $table->intger('rating');
             $table->longText('comment');
             $table->timestamps();

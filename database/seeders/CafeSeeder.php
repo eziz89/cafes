@@ -19,7 +19,7 @@ class CafeSeeder extends Seeder
             ],
             [
                 'name' => 'Full taste',
-                'description' => "Don't think, just come!",
+                'description' => 'Don not think, just come!',
             ],
         ];
 
