@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('cafe_id');
             $table->string('customer_name');
-            $table->intger('rating');
+            $table->integer('rating');
             $table->longText('comment');
             $table->timestamps();
         });

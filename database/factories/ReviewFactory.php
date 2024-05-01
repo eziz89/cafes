@@ -20,9 +20,9 @@ class ReviewFactory extends Factory
     {
         return [
             'cafe_id' => Cafe::factory(),
-            'customer_name' => $this->faker->name,
-            'rating' => $this->faker->rating,
-            'comment' => $this->faker->text,
+            'customer_name' => $this->fake->name,
+            'rating' => $this->fake->rating,
+            'comment' => $this->fake->text,
         ];
     }
 }

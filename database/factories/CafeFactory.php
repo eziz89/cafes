@@ -19,8 +19,8 @@ class CafeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
-            'description' => $this->faker->description
+            'name' => $this->fake->name,
+            'description' => $this->fake->description
         ];
     }
 }
